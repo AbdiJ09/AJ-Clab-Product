@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJ Clab</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- link font goggle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">A<span>J</span></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="nav">
+        <li>
+          <a href="#home"><span>Home</span></a>
+        </li>
+        <li><a href="#" style="--i: 1">About</a></li>
+        <li><a href="#" style="--i: 2">History</a></li>
+        <li><a href="#" style="--i: 3">Product</a></li>
+        <li>
+          <a href="mailto:renah2017@gmail.com" style="--i: 4">Contact</a>
+        </li>
+      </ul>
+      <button class="cta">
+        <span class="hover-underline-animation"> Shop now </span>
+        <svg
+          viewBox="0 0 46 16"
+          height="10"
+          width="30"
+          xmlns="http://www.w3.org/2000/svg"
+          id="arrow-horizontal"
+        >
+          <path
+            transform="translate(30)"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            data-name="Path 10"
+            id="Path_10"
+          ></path>
+        </svg>
+      </button>
+    </header>
+    <section id="home" class="home">
+      <div class="content">
+        <h2>Haii, <span>Welcome</span> to</h2>
+        <h1>
+          AJ <span>Clab</span> Product.<br /><span class="multiple-text"></span>
+        </h1>
+        <p>
+          Cari product Gamepad,keyboard,mouse yang original?<br />AJ
+          <span>Clab</span> Punya solusinya...
+        </p>
+
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Learn More</span>
+        </button>
+      </div>
+      <div class="content-img">
+        <div class="row-img">
+          <img
+            src="./assests/image_1-removebg-preview.png"
+            class="one"
+            alt=""
+          />
+        </div>
+        <div class="main">
+          <div class="row row1">
+            <li>
+              <img
+                src="./assests/image2.png"
+                onclick="slider('./assests/image2.png')"
+                alt=""
+              />
+            </li>
+          </div>
+          <div class="row row2">
+            <li>
+              <img
+                src="./assests/image3.png"
+                onclick="slider('./assests/image3.png')"
+                alt=""
+              />
+            </li>
+          </div>
+          <div class="row row3">
+            <li>
+              <img
+                src="./assests/image4-removebg-preview.png"
+                onclick="slider('./assests/image4-removebg-preview.png')"
+                alt=""
+              />
+            </li>
+          </div>
+          <div class="row row4">
+            <li>
+              <img
+                src="./assests/image_1-removebg-preview.png"
+                onclick="slider('./assests/image_1-removebg-preview.png')"
+              />
+            </li>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/js/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      const type = new Typed(".multiple-text", {
+        strings: ["Mouse", "Keyboard", "Gamepad", "Monitor"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true,
+      });
+
+      const slider = (anyting) => {
+        document.querySelector(".one").src = anyting;
+      };
+    </script>
+  </body>
+</html>
