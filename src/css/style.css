@@ -14,13 +14,15 @@
   --second: #000000;
 }
 body {
+  /*   
   background: linear-gradient(
       to bottom left,
       rgba(179, 173, 173, 0.678),
       rgba(0, 0, 0, 0.705)
     )
     fixed;
-  overflow-x: hidden;
+  overflow-x: hidden; */
+  background: #000000;
 }
 /* height: 1000vh; */
 
