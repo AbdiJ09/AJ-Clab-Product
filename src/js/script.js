@@ -16,3 +16,15 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 200);
 });
 [];
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "100px",
+  duration: 2500,
+  reset: true,
+});
+sr.reveal(".about-img", {});
+sr.reveal(".about-text", { origin: "bottom" }, { delay: 400 });
+sr.reveal(".card", { delay: 400 });
+sr.reveal(".middle-text", { delay: 300 });
+sr.reveal(".product-shop", { origin: "bottom" }, { delay: 300 });
