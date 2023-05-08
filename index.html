@@ -18,6 +18,8 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <header>
@@ -29,7 +31,7 @@
         </li>
         <li><a href="#about" style="--i: 1">About</a></li>
         <li><a href="#" style="--i: 2">History</a></li>
-        <li><a href="#" style="--i: 3">Product</a></li>
+        <li><a href="#product" style="--i: 3">Product</a></li>
         <li>
           <a href="mailto:renah2017@gmail.com" style="--i: 4">Contact</a>
         </li>
@@ -67,7 +69,9 @@
           <span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
-          <span class="button-text">Learn More</span>
+          <span class="button-text" href="#about"
+            ><a href="#about">Learn More</a></span
+          >
         </button>
       </div>
       <div class="content-img">
@@ -185,7 +189,7 @@
     </section>
     <section class="card" id="excellence">
       <div class="box-container">
-        <img src="./assests/Group 26 (1).png alt="" />
+        <img src="./assests/Group 26 (1).png" alt="" />
         <h3>Lebih murah</h3>
         <a href="">Gas,murah tuh</a>
       </div>
@@ -199,6 +203,101 @@
         <img src="./assests/Group_24-removebg-preview.png" alt="" />
         <h3>Pengiriman cepat</h3>
         <a href="">Instannn!</a>
+      </div>
+    </section>
+
+    <!-- section product -->
+
+    <section class="product" id="product">
+      <div class="middle-text">
+        <h4>Our Popular <span>Product</span></h4>
+        <h2>Let's check popular products</h2>
+      </div>
+      <div class="product-shop">
+        <div class="main-product">
+          <div class="img-product">
+            <img src="./assests/prodcut/gamepad.png" alt="" />
+            <h4>Gamepad</h4>
+          </div>
+          <div class="star-product">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+
+          <div class="product-price">
+            <h5>IDR 599K</h5>
+            <div class="buy-btn">
+              <a href="#">Buy Now</a>
+            </div>
+            <span>IDR 699K</span>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="img-product">
+            <img src="./assests/prodcut/handser.png" alt="" />
+            <h4>Handset</h4>
+          </div>
+          <div class="star-product">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+
+          <div class="product-price">
+            <h5>IDR 280K</h5>
+            <span>IDR 500K</span>
+            <div class="buy-btn">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="img-product">
+            <img src="./assests/prodcut/mouse.png" alt="" />
+            <h4>Mouse</h4>
+          </div>
+
+          <div class="star-product">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">
+            <h5>IDR 399K</h5>
+            <span>IDR 799K</span>
+            <div class="buy-btn">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="img-product">
+            <img src="./assests/prodcut/keyboard2.png" alt="" />
+            <h4>Keyboard</h4>
+          </div>
+
+          <div class="star-product">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">
+            <h5>IDR 651K</h5>
+            <span>IDR 899K</span>
+            <div class="buy-btn">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -216,6 +315,9 @@
       const slider = (anyting) => {
         document.querySelector(".one").src = anyting;
       };
+    </script>
+    <script>
+      feather.replace();
     </script>
   </body>
 </html>
