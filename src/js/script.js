@@ -64,8 +64,7 @@ function sendEmail(event) {
     .send("service_yl5sxr9", "template_62tbfss", {
       namaPenerima: "Abdi Janarianto",
       namaPenerima: "Abdi J",
-      namaPengirim: nama,
-      namaPengirim: nama2,
+      namaPengirim: nama + nama2,
       email: email,
       phone: phone,
       pesan: pesan,
