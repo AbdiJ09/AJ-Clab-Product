@@ -86,5 +86,49 @@ function sendEmail(event) {
       }
     );
 }
+// Ambil semua elemen tautan dengan kelas "nav-link"
+const navLinks = document.querySelectorAll(".nav-link");
+
+// Loop melalui setiap elemen tautan
+navLinks.forEach(function (link) {
+  // Tambahkan event listener saat tautan diklik
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    const target = document.querySelector(event.target.getAttribute("href"));
+    target.scrollIntoView();
+  });
+});
+
+// Tambahkan event listener saat pengguna menggulir halaman
+window.addEventListener("scroll", function () {
+  let currentSection = "";
+
+  // Loop melalui setiap bagian
+  document.querySelectorAll("section").forEach(function (section) {
+    let sectionTop = section.offsetTop;
+    let sectionHeight = section.clientHeight;
+
+    // Cek apakah bagian sedang terlihat pada jendela browser
+    if (
+      window.pageYOffset >= sectionTop - sectionHeight / 2 &&
+      window.pageYOffset < sectionTop + sectionHeight
+    ) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  // Hapus kelas "active" dari semua tautan
+  navLinks.forEach(function (link) {
+    link.classList.remove("active");
+  });
+
+  // Tambahkan kelas "active" pada tautan yang sesuai dengan bagian yang aktif
+  let activeLink = document.querySelector(
+    '.nav-link[href="#' + currentSection + '"]'
+  );
+  if (activeLink) {
+    activeLink.classList.add("active");
+  }
+});
 
 // Fungsi untuk menampilkan popup
